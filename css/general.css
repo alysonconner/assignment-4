@@ -1,0 +1,420 @@
+@charset "UTF-8";
+/* Responsive Setup */
+
+@-moz-viewport { width: device-width; scale: 1;}
+@-ms-viewport { width: device-width; scale: 1;}
+@-webkit-viewport { width: device-width; scale: 1;}
+@-o-viewport { width: device-width; scale: 1;}
+@viewport { width: device-width; scale: 1;}
+
+html{
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-o-text-size-adjust: 100%;
+}
+
+/* CSS */
+
+html {
+	background: url(../images/biggerbackground.jpg);
+	background-repeat: no-repeat;
+	/*background-position: bottom center; */
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+html, body{
+	font-family: 'Antic Slab', serif;
+	width: 100%;
+}
+
+image {
+	width: 100%;
+}
+
+nav {
+	text-transform:uppercase;
+}
+
+.shadow {
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	-moz-box-shadow: 0 8px 6px -6px black;
+	box-shadow: 0 8px 6px -6px black;
+	border: 2px solid rgba(245,239,239,0.5);
+}
+
+.introschedule {
+	margin-top: 1rem;
+	margin-bottom: 1.5rem;
+	padding: 1rem;	
+}
+
+.whatsnew {
+	margin-top: 1rem;
+	margin-bottom: 1.5rem;
+	padding: 1rem;
+	background-color: rgba(245,239,239,0.5);	
+	display: block;
+}
+
+.ul{
+	font-size: 12px;
+}
+
+.dl {
+	font-size: 12px;
+}
+@media only screen and (min-width: 77em){
+	.nav a, 
+	.nav a:link,
+	.nav a:visited{
+		display: block;
+		padding: .25rem;
+		text-align:left;	
+	}
+}
+
+@media only screen and (min-width: 100em){
+	html {
+		font-size: 1.5em;
+	}
+	.logo {
+		width:18rem;	
+	}
+}
+
+.logo {
+	margin: auto;
+	width:10rem;	
+	display:block;
+	padding-bottom: .5rem;
+	padding-top: 3rem;
+}
+
+h1 {
+	text-align: center;
+	position: relative;
+	background: rgba(0,0,0,.1);
+}
+
+h1, 
+.main,
+.copyright{
+	width: 100%;
+	padding: 5%;
+	line-height:1.25rem;
+}
+
+h2 {
+	font-size: 22px;
+	margin-bottom: 1.5rem;
+	margin-top: 3.5rem;
+	border-bottom:1px solid black;
+
+}
+
+.h2 {
+	display: block;	
+}
+
+h3 {
+	margin-top: 1.5rem;
+	margin-bottom: -.5rem;
+}
+
+h4 {
+	text-align: center;
+	position: relative;
+	background: rgba(0,0,0,.1);
+	padding: 2%;
+	font-size: 18px;
+}
+
+.bold {
+	font-weight: bold;
+	font-size: 30px;
+	border-bottom:3px double black;
+	display:block;
+	line-height: 2.5rem;
+	margin-bottom: 2rem;
+	
+}
+
+img{
+	width: 100%;
+}
+
+.buttonimg {
+	margin: auto;
+	width:5rem;	
+	display:block;
+	padding-bottom: .5rem;
+	padding-top: 3rem;
+}
+
+.hide-text {
+text-indent: 100%;
+white-space: nowrap;
+overflow: hidden;
+}
+
+/* Navigation Styles */
+
+.nav-btn,
+.nav-btn:link,
+.nav-btn:visited{
+	display: block;
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	top: 10px;	
+	right: 5%;
+	
+	background: black url('../images/nav-icon.svg') no-repeat center center;
+	/* background-color || background-image || background-repeat || background-position*/
+}
+
+.nav-btn:hover,
+.nav-btn:focus,
+.nav-btn:active{
+	background-color: #FFF;
+	opacity: .5;
+}
+
+.nav-btn[data-state="active"] {
+	background: white url('../images/nav-close.svg') no-repeat center center;
+	opacity: .5;
+}
+
+.nav a, 
+.nav a:link,
+.nav a:visited{
+	display: block;
+	padding: 1rem;
+	text-align:center;
+	color: #000;
+	text-decoration: none;
+	/* border-width || border-style || border-color */
+}
+
+.nav a:hover,
+.nav a:focus,
+.nav a:active{
+	background-color: rgba(245,239,239,0.5);
+}
+
+	/* Toggle Nav*/
+
+	.nav-top{
+		max-height: 0;
+		-moz-transition: all 250ms linear;
+		-o-transition: all 250ms linear;
+		-webkit-transition: all 250ms linear;
+		transition: all 250ms linear;
+		overflow:hidden;
+	}
+
+	.nav-top[data-state="expanded"]{
+		max-height: 14rem;
+	}
+	
+@media only screen and (min-width: 25em){
+	.nav-top {
+	border-top: 1px solid black;	
+	}
+	.nav{
+		overflow: auto;
+	}
+	
+	.nav li{
+		float: left;
+		width: 33.33%;
+	}
+	.nav-btn,
+	.nav-btn:link,
+	.nav-btn:visited{
+		display: none;
+	}
+	.nav-top{
+		max-height: 5rem;
+	}
+	.nav-bottom {
+		display: none;	
+	}
+	.buttonimg {
+		width:4rem;	
+	}
+}
+
+.hours-list {
+	margin-top: 1rem;
+	padding: 1rem;
+	background-color: rgba(245,239,239,0.5);
+}
+
+.hours-list li{
+	margin: 1em 0;
+	line-height: 1.3;
+	text-align:center;
+}
+
+.hours-list dt{
+	font-weight: bold;
+	background-color: rgba(0,0,0,.2);
+	font-size: 1rem;
+}
+
+.hours-list dd:last-child{
+	color: #666;
+	font-style: italic;
+	font-size: 0.875rem;
+}
+
+.hours-table thead{
+	color: #000;
+	font-size: 1rem;
+	border-bottom: 5px solid #000;
+}
+
+
+.hours-table th,
+.hours-table td{
+	padding: 0.5rem .5rem;
+	text-align: center;
+	border: 1px solid black;
+}
+
+.dn {
+	font-size: 20px;
+	font-weight: bold;
+	border-bottom: 3px solid black;
+	display: block;
+}
+
+.hours-table tr:nth-child(even){
+	background-color: rgba(0,0,0,.2);
+}
+
+.hours-table tr:last-child{
+	border-bottom: 2px solid #000;
+}
+
+.hours-table{
+	margin-bottom: 2rem;
+	background: rgba(245,239,239,0.5);
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	display: none;
+	max-width: 55rem;
+}
+
+
+/* Schedule */
+
+
+@media only screen and (min-width: 25em){
+	.h2 {
+	display: block;	
+	}
+	.hours-table {
+		display: table;
+	}
+	.hours-list{
+		display: none;
+	}
+	.schedule-list{
+		display:none;
+	}
+}
+
+
+@media only screen and (min-width: 35em){
+	.logo {
+		width:14rem;	
+	}
+	.image-list li{
+		width: 20%;
+	}
+	
+		.hours-table {
+		display: table;
+	}
+	.hours-list{
+		display: none;
+	}
+	.schedule-list{
+		display:none;
+	}
+}
+
+/* Prices */
+
+@media only screen and (min-width: 40em){
+	.nav-top {
+		border-top: 1px solid black;
+		text-align: center;
+	}
+	.nav-top li {
+		margin: 0 .5rem;
+		margin: auto;
+		display: inline-block;
+		border: none;
+		padding: 0;
+		width: 10em;
+		text-align: center;
+		float: none;
+	}
+	
+	.nav-bottom {
+		text-align: center;	
+	}
+	.nav-bottom li {
+		display: inline-block;
+		float: none;
+		width: 10em;
+	}
+	.hours-table {
+		display: table;
+	}
+	.hours-list{
+		display: none;
+	}
+	.schedule-list{
+		display:none;
+	}
+	
+	.feature img {
+		float: right;
+		width:45%;	
+		margin-bottom: 2rem;
+		margin-top:2rem;
+		margin-left:1.5rem;
+	}
+	.floatleft {
+		margin-top: 3.5rem;	
+	}
+	.poolhours {
+	clear: both;	
+	}
+}
+
+footer {
+	background-color: rgba(0,0,0,.2);
+}
+
+.copyright {
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
